@@ -38,10 +38,11 @@ class FavoritesFragment : Fragment() {
     private fun initListeners() {
 
         binding.btnGoToListar.setOnClickListener {
-            findNavController().navigate(
-                R.id.action_favoritesFragment_to_modificarFragment
-            )
+            findNavController()
+                .navigate(
+                    FavoritesFragmentDirections
+                        .actionFavoritesFragmentToModificarFragment("Bayron")
+                )
         }
-
     }
 }

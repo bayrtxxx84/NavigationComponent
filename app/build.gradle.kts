@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
     id("com.google.devtools.ksp")
+    id("androidx.navigation.safeargs.kotlin")
 }
 
 android {
@@ -75,5 +76,14 @@ dependencies {
     //Navigation Components
     implementation("androidx.navigation:navigation-fragment-ktx:2.7.7")
     implementation("androidx.navigation:navigation-ui-ktx:2.7.7")
+
+    // Fragment, activity viewmodel
+    implementation("androidx.fragment:fragment-ktx:1.8.0")
+    implementation("androidx.activity:activity-ktx:1.9.0")
+    // ViewModel
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.2")
+    // LiveData
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.8.2")
+
 
 }

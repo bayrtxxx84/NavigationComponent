@@ -12,11 +12,16 @@
         tools:layout="@layout/fragment_favorites" >
         <action
             android:id="@+id/action_favoritesFragment_to_modificarFragment"
-            app:destination="@id/modificarFragment" />
+            app:destination="@id/modificarFragment"
+            app:enterAnim="@anim/nav_default_enter_anim" />
     </fragment>
     <fragment
         android:id="@+id/modificarFragment"
         android:name="com.torres.myapplication.ui.fragments.ModificarFragment"
         android:label="fragment_modificar"
-        tools:layout="@layout/fragment_modificar" />
+        tools:layout="@layout/fragment_modificar" >
+        <argument
+            android:name="name"
+            app:argType="string" />
+    </fragment>
 </navigation>
